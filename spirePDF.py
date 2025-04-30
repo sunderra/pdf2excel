@@ -72,7 +72,7 @@ if __name__ == "__main__":
     for uploaded_file in uploaded_files:
         st.sidebar.write("You selected filenames:", uploaded_file.name)
         # Convert Excel to PDF
-        pdf_filename = os.path.basename(uploaded_file.name).split('.')[0] + '.pdf'
+        pdf_filename = os.path(uploaded_file.name).split('.')[0] + '.pdf'
         st.sidebar.write("Converting to :", pdf_filename)
         #excel_to_pdf(uploaded_file.name, pdf_filename)
 
