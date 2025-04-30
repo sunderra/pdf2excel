@@ -74,7 +74,7 @@ if __name__ == "__main__":
         # Convert Excel to PDF
         pdf_filename = os.path.basename(uploaded_file.name).split('.')[0] + '.pdf'
         st.sidebar.write("Converting to :", pdf_filename)
-        excel_to_pdf(uploaded_file.name, pdf_filename)
+        #excel_to_pdf(uploaded_file.name, pdf_filename)
 
     # Convert PDF to Excel
     #pdf_to_excel(pdf_file, excel_file)
