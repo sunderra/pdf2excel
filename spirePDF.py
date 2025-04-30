@@ -5,6 +5,12 @@ from spire.xls.common import *
 from spire.pdf.common import *
 from spire.pdf import *
 
+def file_selector(folder_path='.'):
+    filenames = os.listdir(folder_path)
+    selected_filename = st.selectbox('Select a file', filenames)
+    return os.path.join(folder_path, selected_filename)
+
+
 # --- Excel to PDF ---
 def excel_to_pdf(excel_path, pdf_path):
     try:
@@ -65,6 +71,8 @@ def pdf_to_excel(pdf_path, excel_path):
 # --- Main execution ---
 
 if __name__ == "__main__":
+    filenames = file_selector("c:\\")
+
     uploaded_files = st.sidebar.file_uploader(
         "Choose one or more Excel files", type=['.xls','.xlsx'], accept_multiple_files=True
         )
