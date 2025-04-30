@@ -71,7 +71,7 @@ def pdf_to_excel(pdf_path, excel_path):
 # --- Main execution ---
 
 if __name__ == "__main__":
-    filenames = file_selector("c:\\")
+    filenames = file_selector("c:\.")
 
     uploaded_files = st.sidebar.file_uploader(
         "Choose one or more Excel files", type=['.xls','.xlsx'], accept_multiple_files=True
